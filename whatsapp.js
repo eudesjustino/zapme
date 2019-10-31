@@ -85,6 +85,11 @@ class WhatsApp extends EventEmitter {
         return retorno;
     }
 
+    getPage(){
+        console.log(this.Page);
+        return this.Page;
+    }
+
 }
 
-module.exports = WhatsApp;
+module.exports = new WhatsApp();

@@ -7,6 +7,9 @@
 var app = require('../app');
 var debug = require('debug')('zapme:server');
 var http = require('http');
+var zapme = require('../whatsapp');
+
+zapme.initialize();
 
 /**
  * Get port from environment and store in Express.
@@ -86,5 +89,6 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
+    console.log('Listening on ' + bind);
   debug('Listening on ' + bind);
 }
